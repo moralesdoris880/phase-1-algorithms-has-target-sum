@@ -1,5 +1,13 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++){ 
+    for(let d = (i + 1); d < array.length;d++){
+      let sum = array[i] + array[d]
+      if (sum === target){
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
@@ -7,11 +15,14 @@ function hasTargetSum(array, target) {
 */
 
 /* 
-  Add your pseudocode here
+  For loop that goes through the first index and tests out with the other indexes
+  if first index + second index = target return true
+  if not continue iterating
+  if nothing is found return false
 */
 
 /*
-  Add written explanation of your solution here
+  Iterates through the array and looks for two numbers that add up to the target
 */
 
 // You can run `node index.js` to view these console logs
